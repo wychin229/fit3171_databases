@@ -1,0 +1,151 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F4323000-4214-D12C-FE46-39F361F694E6" name="MEMBER">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 07:32:33 UTC</createdTime>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="mem_no" id="B712F4D8-F63D-FEA3-0836-6E3CE3CE4EEE">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 07:32:47 UTC</createdTime>
+<commentInRDBMS><![CDATA[member number, unique to each member]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="mem_name" id="4F4B65AF-0E0A-60B0-A0A5-85797CE96A87">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 07:33:37 UTC</createdTime>
+<commentInRDBMS><![CDATA[member full name]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="mem_street" id="B8C4C498-CDA9-471F-0962-FA820462DF47">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 07:34:53 UTC</createdTime>
+<commentInRDBMS><![CDATA[street of member's address]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="mem_town" id="5718A035-C015-CECB-4A2A-45651043A491">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 07:37:12 UTC</createdTime>
+<commentInRDBMS><![CDATA[town of member's address]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="mem_postcode" id="720F76A2-A224-CC81-3C1B-A1F3BD4E3B0E">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 07:37:33 UTC</createdTime>
+<commentInRDBMS><![CDATA[postcode of member's address]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="mem_phone" id="39A6F30B-68B5-C79A-86C3-E3D8B0397C72">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 07:37:53 UTC</createdTime>
+<commentInRDBMS><![CDATA[member's phone number]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ctr_id" id="A794B285-3C5F-D087-18F4-FE2135C71EA3">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 11:34:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[centre id]]></commentInRDBMS>
+<generatorID>B8A21D3F-7C44-3758-3012-467932D913A3</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<referedAttribute>69B2CF77-7EE5-7154-4661-58B0E4CD64E3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="mem_referredby_id" id="A6854319-0CB3-4182-3DCA-D06ED4166130">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 11:37:51 UTC</createdTime>
+<commentInRDBMS><![CDATA[member number, unique to each member]]></commentInRDBMS>
+<generatorID>53768D01-1032-9FE0-CDDB-17631577001F</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>B712F4D8-F63D-FEA3-0836-6E3CE3CE4EEE</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="05220D89-16BB-D8F8-ED6A-6F945492BDD0" name="MEMBER PK">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 07:33:25 UTC</createdTime>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>B712F4D8-F63D-FEA3-0836-6E3CE3CE4EEE</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

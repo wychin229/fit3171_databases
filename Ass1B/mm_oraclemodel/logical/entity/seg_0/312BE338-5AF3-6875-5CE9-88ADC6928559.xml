@@ -1,0 +1,149 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="312BE338-5AF3-6875-5CE9-88ADC6928559" name="ATTENDANCE">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 08:02:51 UTC</createdTime>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="attendance_no" id="9FFD5338-BCCC-50BC-3954-5D39D63DCDAE">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 13:53:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[attendance number (surrogate key)]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ctr_id" id="D8533866-C1CF-00A0-6C05-9FBDB72110DC">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 12:59:45 UTC</createdTime>
+<commentInRDBMS><![CDATA[centre id]]></commentInRDBMS>
+<generatorID>25ACFC3D-80A9-72CF-E220-CBA509F88312</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<referedAttribute>1D6C88B6-0316-061F-B84E-070448D4A06A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cls_num" id="017FB144-408A-71B2-2D12-E25CC870706E">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 12:47:26 UTC</createdTime>
+<commentInRDBMS><![CDATA[class number assigned to this class]]></commentInRDBMS>
+<generatorID>25ACFC3D-80A9-72CF-E220-CBA509F88312</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<referedAttribute>E3D5819F-A728-DF9D-79A4-88507F3AF39B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="mem_no" id="1989DDD4-44F1-389C-D3C8-2F1B7DA85B08">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 08:05:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[member's member number who that signed up for the class]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="pay_date" id="6A757DDE-14CA-76C7-8446-A53ACC77F07F">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 08:06:49 UTC</createdTime>
+<commentInRDBMS><![CDATA[payment date of member who signed up for the class]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="session_date" id="1D072AFB-3868-5411-F8C4-58BC8FA6DC63">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 08:07:54 UTC</createdTime>
+<commentInRDBMS><![CDATA[date of class session, used to record if member attended the class]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="total_attendance" id="E4506FE8-3C8B-2DD8-DF4D-434258B0B26E">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 08:08:38 UTC</createdTime>
+<commentInRDBMS><![CDATA[total attendance of specific member in a class (for all session)]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="5B32DC71-9E9D-BCFC-CCAE-49B75D7BCD1F" name="ATTENDANCE PK">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 08:03:14 UTC</createdTime>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>9FFD5338-BCCC-50BC-3954-5D39D63DCDAE</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="B048D910-E0C1-3945-7ADC-4D193760B052" name="ATTENDANCE NK">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 13:54:09 UTC</createdTime>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="false"/>
+</engineerTo>
+<newElementsIDs>1989DDD4-44F1-389C-D3C8-2F1B7DA85B08,D8533866-C1CF-00A0-6C05-9FBDB72110DC,017FB144-408A-71B2-2D12-E25CC870706E</newElementsIDs>
+<usedAttributes>
+<attributeRef>1989DDD4-44F1-389C-D3C8-2F1B7DA85B08</attributeRef>
+<attributeRef>D8533866-C1CF-00A0-6C05-9FBDB72110DC</attributeRef>
+<attributeRef>017FB144-408A-71B2-2D12-E25CC870706E</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

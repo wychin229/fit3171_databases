@@ -1,0 +1,106 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="FA670D55-7015-329B-7786-BA4320398EF7" name="FACILITY">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 07:05:06 UTC</createdTime>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ctr_id" id="1F805EBC-CD6F-8AFF-7ABE-03B8973C586E">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 12:52:01 UTC</createdTime>
+<commentInRDBMS><![CDATA[centre id]]></commentInRDBMS>
+<generatorID>F0795267-263C-8377-F471-C7E24CF72CBA</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<referedAttribute>69B2CF77-7EE5-7154-4661-58B0E4CD64E3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fac_roomno" id="83205056-DC59-E2DC-A72B-FD45089450EC">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 07:05:18 UTC</createdTime>
+<commentInRDBMS><![CDATA[facility room number]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fac_name" id="B5815934-F7DC-9CC1-AC8A-0A3FC124CE14">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 07:06:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[facility name]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fac_cap" id="88384766-41C7-16E1-EA9F-11D90EB0C224">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 07:07:06 UTC</createdTime>
+<commentInRDBMS><![CDATA[facility pax capacity]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fac_desc" id="680A8145-4E4F-EFEA-85BE-B83311C46927">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 07:07:47 UTC</createdTime>
+<commentInRDBMS><![CDATA[facility description]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="448AA42B-2CC4-0856-88FA-DEEC594F06C6" name="FACILITY PK">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 07:05:31 UTC</createdTime>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>83205056-DC59-E2DC-A72B-FD45089450EC</attributeRef>
+<attributeRef>1F805EBC-CD6F-8AFF-7ABE-03B8973C586E</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,148 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D0E36A66-1626-223B-A617-5A536B294BDF" name="ATTENDANCE">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<generatorID>312BE338-5AF3-6875-5CE9-88ADC6928559</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="attendance_no" id="1AE186FB-8A0F-A958-B81B-1A34D811F7FC">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[attendance number (surrogate key)]]></commentInRDBMS>
+<generatorID>9FFD5338-BCCC-50BC-3954-5D39D63DCDAE</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ctr_id" id="E73B43F6-7DB4-8438-9ABB-D8A3B6C8C0DD">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[centre id]]></commentInRDBMS>
+<generatorID>D8533866-C1CF-00A0-6C05-9FBDB72110DC</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9AE44F65-60B6-3761-7E1C-1917F2E15271" referredColumn="6C3E7815-5FF1-A630-A075-511F7D3610CC"/>
+</associations>
+</Column>
+<Column name="cls_num" id="61A9F6DB-6071-E09C-63B6-DC1248D4D638">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[class number assigned to this class]]></commentInRDBMS>
+<generatorID>017FB144-408A-71B2-2D12-E25CC870706E</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9AE44F65-60B6-3761-7E1C-1917F2E15271" referredColumn="F53F0AC5-958C-3C39-A328-0A00D12475BD"/>
+</associations>
+</Column>
+<Column name="mem_no" id="B62BB702-29E2-9300-D3EF-B9651A9C4173">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[member's member number who that signed up for the class]]></commentInRDBMS>
+<generatorID>1989DDD4-44F1-389C-D3C8-2F1B7DA85B08</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pay_date" id="BA9D32F1-6C7F-89AF-C993-13159573B3A5">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[payment date of member who signed up for the class]]></commentInRDBMS>
+<generatorID>6A757DDE-14CA-76C7-8446-A53ACC77F07F</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="session_date" id="44B774DA-5216-5256-C7A2-24EC99F40202">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[date of class session, used to record if member attended the class]]></commentInRDBMS>
+<generatorID>1D072AFB-3868-5411-F8C4-58BC8FA6DC63</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="total_attendance" id="16958B99-060B-83A1-2C91-E78130D14606">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[total attendance of specific member in a class (for all session)]]></commentInRDBMS>
+<generatorID>E4506FE8-3C8B-2DD8-DF4D-434258B0B26E</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4C4BDE6C-6363-165C-EBE6-B4F247167FA9" name="ATTENDANCE_PK">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<generatorID>5B32DC71-9E9D-BCFC-CCAE-49B75D7BCD1F</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1AE186FB-8A0F-A958-B81B-1A34D811F7FC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B3A47F99-1B1D-BE1C-02F1-BC8413E5B628" name="ATTENDANCE_NK">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<generatorID>B048D910-E0C1-3945-7ADC-4D193760B052</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B62BB702-29E2-9300-D3EF-B9651A9C4173"/>
+<colUsage columnID="E73B43F6-7DB4-8438-9ABB-D8A3B6C8C0DD"/>
+<colUsage columnID="61A9F6DB-6071-E09C-63B6-DC1248D4D638"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="765D4235-3EAC-DCF4-19B6-F148B456016C" name="CLASS_ATTENDANCE">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<generatorID>25ACFC3D-80A9-72CF-E220-CBA509F88312</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="61A9F6DB-6071-E09C-63B6-DC1248D4D638"/>
+<colUsage columnID="E73B43F6-7DB4-8438-9ABB-D8A3B6C8C0DD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

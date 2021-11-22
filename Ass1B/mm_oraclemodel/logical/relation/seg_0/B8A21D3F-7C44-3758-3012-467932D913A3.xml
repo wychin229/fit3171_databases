@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="MEMBER_CENTRE" directorySegmentName="seg_0" id="B8A21D3F-7C44-3758-3012-467932D913A3">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 11:34:17 UTC</createdTime>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<sourcePk>63E0D981-33CE-09D0-A64B-0A6A63A36893</sourcePk>
+<identifying>false</identifying>
+<nameOnSource> </nameOnSource>
+<nameOnTarget>nominates</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>797E6889-6A03-F1CE-731D-C1D42C5B1BAF</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>F4323000-4214-D12C-FE46-39F361F694E6</targetEntity>
+<transferable>true</transferable>
+</Relation>

@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="CENTRE_FACILITY" directorySegmentName="seg_0" id="F0795267-263C-8377-F471-C7E24CF72CBA">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 12:52:01 UTC</createdTime>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<sourcePk>63E0D981-33CE-09D0-A64B-0A6A63A36893</sourcePk>
+<identifying>true</identifying>
+<nameOnSource>has</nameOnSource>
+<nameOnTarget> </nameOnTarget>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>797E6889-6A03-F1CE-731D-C1D42C5B1BAF</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>FA670D55-7015-329B-7786-BA4320398EF7</targetEntity>
+<transferable>true</transferable>
+</Relation>

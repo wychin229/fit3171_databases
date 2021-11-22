@@ -1,0 +1,153 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DEB3A069-59AC-04DE-267C-B625C40201A5" name="CLASS_STAFFING">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<generatorID>504FEF35-AA53-A4FD-CD2E-D4CD45A6459B</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="staffing_no" id="2C9B65DE-F284-083B-26E2-290624E74732">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[class staffing number (surrogate key)]]></commentInRDBMS>
+<generatorID>C80F1BC7-6BBC-C33E-CAF6-96B5B419C4EA</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ctr_id" id="29239069-A830-03D3-C99B-754270DAF26C">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[centre id]]></commentInRDBMS>
+<generatorID>C95B8C2F-CD25-83C4-8530-A5A7175B7913</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A5576F99-9ECD-0973-D21B-B73DBCA083CC" referredColumn="6C3E7815-5FF1-A630-A075-511F7D3610CC"/>
+</associations>
+</Column>
+<Column name="cls_num" id="92F4CCF9-0F72-7E6B-AB54-F4EFAB8789E3">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[class number assigned to this class]]></commentInRDBMS>
+<generatorID>2360EEE2-3F3A-76F7-7D4D-B33C006C83EC</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A5576F99-9ECD-0973-D21B-B73DBCA083CC" referredColumn="F53F0AC5-958C-3C39-A328-0A00D12475BD"/>
+</associations>
+</Column>
+<Column name="stf_id" id="9BFB0449-9448-AFB5-E6AE-56C73A56E026">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[staff id]]></commentInRDBMS>
+<generatorID>45A39777-8510-FEB4-44BB-69C90DF48E5E</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B404F08C-33EA-3848-B1E4-67FDDA21D662" referredColumn="1537FA4E-8BD4-53D1-8931-A3AD019E01F5"/>
+</associations>
+</Column>
+<Column name="cls_lead" id="C90335B3-3F7E-8D04-D9B9-D183BD9EAF59">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[inidcating if the staff is the leader of the stated class]]></commentInRDBMS>
+<generatorID>81999F59-A7CD-E3EF-FADC-0CBE92D8B6E4</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="first_aidcert" id="9A59B853-3B58-7824-6A32-5A2EE350C5BB">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[inidcating if the staff is first aid certified]]></commentInRDBMS>
+<generatorID>2A510BBA-6F6C-8ED4-F76B-445FB533072D</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7618FFA8-70CC-EAF4-F31F-FBD71F8413BE" name="STAFFING_PK">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<generatorID>F15D3C6E-C4C5-0FB0-891C-5F1929A52150</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2C9B65DE-F284-083B-26E2-290624E74732"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C64F99F1-EA8B-6C5B-4EF4-DD1AC9C46A83" name="STAFFING_NK">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<generatorID>568CE2CF-6468-7FC8-7067-30ACD7A7F80C</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="29239069-A830-03D3-C99B-754270DAF26C"/>
+<colUsage columnID="92F4CCF9-0F72-7E6B-AB54-F4EFAB8789E3"/>
+<colUsage columnID="9BFB0449-9448-AFB5-E6AE-56C73A56E026"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A9C9C8B4-EB7F-3407-A0C2-19E35CCF3613" name="CLASS_STAFFING">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<generatorID>CB86BCC7-9F31-B9AF-B4CB-FC3897C82576</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="92F4CCF9-0F72-7E6B-AB54-F4EFAB8789E3"/>
+<colUsage columnID="29239069-A830-03D3-C99B-754270DAF26C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2603B012-95E1-0FB0-681E-5E2E45BB91B5" name="STAFF_CLS_STAFFING">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<generatorID>10A7FCDE-C101-07E7-99FF-438105AA04A4</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9BFB0449-9448-AFB5-E6AE-56C73A56E026"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

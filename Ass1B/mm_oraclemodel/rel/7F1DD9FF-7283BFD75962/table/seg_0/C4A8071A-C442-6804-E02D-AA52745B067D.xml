@@ -1,0 +1,52 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C4A8071A-C442-6804-E02D-AA52745B067D" name="CLASSTYPE">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<generatorID>78F54284-D7B6-9D0A-7B22-9A4A2DAA82FA</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cls_type" id="02FA9B9F-2BE7-192A-E720-E51A2934A27E">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[class type]]></commentInRDBMS>
+<generatorID>E5DF39C6-CB27-9686-CB1F-7E8A51111820</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cls_desc" id="576A3683-DED1-2E33-7133-90399C972AD0">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[class description]]></commentInRDBMS>
+<generatorID>9BB85EA0-5E71-8105-C8D5-A34D910079FD</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="22C718A5-A8B7-5BC1-5B94-35B1FED5C630" name="CLASSTYPE_PK">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<generatorID>D4B3DB8E-C62B-846A-F6E5-2536D530CF33</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="02FA9B9F-2BE7-192A-E720-E51A2934A27E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

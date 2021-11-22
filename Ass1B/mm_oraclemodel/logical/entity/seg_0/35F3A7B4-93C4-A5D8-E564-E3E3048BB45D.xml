@@ -1,0 +1,94 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="35F3A7B4-93C4-A5D8-E564-E3E3048BB45D" name="PAYMENT">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 12:01:30 UTC</createdTime>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="mem_no" id="0DDE9A58-B1D3-FD22-552D-8BA64D09E4E6">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 12:09:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[member number, unique to each member]]></commentInRDBMS>
+<generatorID>6699CF72-255B-9B4C-941F-71AAE61155FD</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<referedAttribute>B712F4D8-F63D-FEA3-0836-6E3CE3CE4EEE</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="pay_date" id="514E6EDF-9741-5EA8-B16B-FBAC63B683AC">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 12:10:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[date of payment made]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cls_num" id="5333968B-85DA-A9F3-4667-55BE5A7A4A74">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 12:44:08 UTC</createdTime>
+<commentInRDBMS><![CDATA[class number assigned to this class]]></commentInRDBMS>
+<generatorID>79FDEF58-CB1E-E98D-7219-D78297777C39</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<referedAttribute>E3D5819F-A728-DF9D-79A4-88507F3AF39B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ctr_id" id="DC798A85-4276-99C5-5539-A56853A9A07C">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 12:59:45 UTC</createdTime>
+<commentInRDBMS><![CDATA[centre id]]></commentInRDBMS>
+<generatorID>79FDEF58-CB1E-E98D-7219-D78297777C39</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<referedAttribute>1D6C88B6-0316-061F-B84E-070448D4A06A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="E0F738E3-B6FD-03EF-D468-8F65AE07B043" name="PAYMENT PK">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 12:01:41 UTC</createdTime>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>0DDE9A58-B1D3-FD22-552D-8BA64D09E4E6</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

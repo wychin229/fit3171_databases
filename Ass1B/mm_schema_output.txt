@@ -1,0 +1,758 @@
+SQL> 
+SQL> DROP TABLE assessment CASCADE CONSTRAINTS;
+
+Table ASSESSMENT dropped.
+
+SQL> 
+SQL> DROP TABLE attendance CASCADE CONSTRAINTS;
+
+Table ATTENDANCE dropped.
+
+SQL> 
+SQL> DROP TABLE centre CASCADE CONSTRAINTS;
+
+Table CENTRE dropped.
+
+SQL> 
+SQL> DROP TABLE class CASCADE CONSTRAINTS;
+
+Table CLASS dropped.
+
+SQL> 
+SQL> DROP TABLE class_staffing CASCADE CONSTRAINTS;
+
+Table CLASS_STAFFING dropped.
+
+SQL> 
+SQL> DROP TABLE classtype CASCADE CONSTRAINTS;
+
+Table CLASSTYPE dropped.
+
+SQL> 
+SQL> DROP TABLE facility CASCADE CONSTRAINTS;
+
+Table FACILITY dropped.
+
+SQL> 
+SQL> DROP TABLE member CASCADE CONSTRAINTS;
+
+Table MEMBER dropped.
+
+SQL> 
+SQL> DROP TABLE payment CASCADE CONSTRAINTS;
+
+Table PAYMENT dropped.
+
+SQL> 
+SQL> DROP TABLE staff CASCADE CONSTRAINTS;
+
+Table STAFF dropped.
+
+SQL> 
+SQL> -- predefined type, no DDL - MDSYS.SDO_GEOMETRY
+SQL> 
+SQL> -- predefined type, no DDL - XMLTYPE
+SQL> 
+SQL> CREATE TABLE assessment (
+  2      ast_no      NUMBER(7) NOT NULL,
+  3      mem_no      NUMBER(7) NOT NULL,
+  4      ast_date    DATE NOT NULL,
+  5      ast_weight  NUMBER(7) NOT NULL,
+  6      ast_bp      VARCHAR2(20) NOT NULL,
+  7      ast_bmi     VARCHAR2(20) NOT NULL,
+  8      ast_vo2max  VARCHAR2(20) NOT NULL,
+  9      stf_id      NUMBER(7) NOT NULL
+ 10  );
+
+Table ASSESSMENT created.
+
+SQL> 
+SQL> COMMENT ON COLUMN assessment.ast_no IS
+  2      'assessment number (surrogate PK)';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN assessment.mem_no IS
+  2      'member number, unique to each member';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN assessment.ast_date IS
+  2      'date of assessment completion';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN assessment.ast_weight IS
+  2      'weight of member';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN assessment.ast_bp IS
+  2      'bp of member';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN assessment.ast_bmi IS
+  2      'bmi of member';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN assessment.ast_vo2max IS
+  2      'VO2Max of member';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN assessment.stf_id IS
+  2      'staff id';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE assessment ADD CONSTRAINT assessment_pk PRIMARY KEY ( ast_no );
+
+Table ASSESSMENT altered.
+
+SQL> 
+SQL> ALTER TABLE assessment ADD CONSTRAINT assessment_nk UNIQUE ( ast_date,
+  2                                                               mem_no );
+
+Table ASSESSMENT altered.
+
+SQL> 
+SQL> CREATE TABLE attendance (
+  2      attendance_no     NUMBER(7) NOT NULL,
+  3      ctr_id            NUMBER(7) NOT NULL,
+  4      cls_num           NUMBER(7) NOT NULL,
+  5      mem_no            NUMBER(7) NOT NULL,
+  6      pay_date          DATE NOT NULL,
+  7      session_date      DATE NOT NULL,
+  8      total_attendance  NUMBER(7) NOT NULL
+  9  );
+
+Table ATTENDANCE created.
+
+SQL> 
+SQL> COMMENT ON COLUMN attendance.attendance_no IS
+  2      'attendance number (surrogate key)';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN attendance.ctr_id IS
+  2      'centre id';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN attendance.cls_num IS
+  2      'class number assigned to this class';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN attendance.mem_no IS
+  2      'member''s member number who that signed up for the class';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN attendance.pay_date IS
+  2      'payment date of member who signed up for the class';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN attendance.session_date IS
+  2      'date of class session, used to record if member attended the class';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN attendance.total_attendance IS
+  2      'total attendance of specific member in a class (for all session)';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE attendance ADD CONSTRAINT attendance_pk PRIMARY KEY ( attendance_no );
+
+Table ATTENDANCE altered.
+
+SQL> 
+SQL> ALTER TABLE attendance
+  2      ADD CONSTRAINT attendance_nk UNIQUE ( mem_no,
+  3                                            ctr_id,
+  4                                            cls_num );
+
+Table ATTENDANCE altered.
+
+SQL> 
+SQL> CREATE TABLE centre (
+  2      ctr_id        NUMBER(7) NOT NULL,
+  3      ctr_name      VARCHAR2(50) NOT NULL,
+  4      ctr_street    VARCHAR2(50) NOT NULL,
+  5      cls_town      VARCHAR2(50) NOT NULL,
+  6      ctr_phone     VARCHAR2(20) NOT NULL,
+  7      ctr_postcode  VARCHAR2(10) NOT NULL
+  8  );
+
+Table CENTRE created.
+
+SQL> 
+SQL> COMMENT ON COLUMN centre.ctr_id IS
+  2      'centre id';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN centre.ctr_name IS
+  2      'centre name';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN centre.ctr_street IS
+  2      'street of centre''s address';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN centre.cls_town IS
+  2      'town of centre''s address';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN centre.ctr_phone IS
+  2      'centre phone number';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN centre.ctr_postcode IS
+  2      'postcode of centre''s address';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE centre ADD CONSTRAINT centre_pk PRIMARY KEY ( ctr_id );
+
+Table CENTRE altered.
+
+SQL> 
+SQL> CREATE TABLE class (
+  2      ctr_id           NUMBER(7) NOT NULL,
+  3      cls_num          NUMBER(7) NOT NULL,
+  4      cls_sdatetime    DATE NOT NULL,
+  5      cls_maxpax       NUMBER(7) NOT NULL,
+  6      cls_numsess      NUMBER(7) NOT NULL,
+  7      cls_cost         NUMBER(7, 2) NOT NULL,
+  8      cls_duration     VARCHAR2(20) NOT NULL,
+  9      cls_type         VARCHAR2(50) NOT NULL,
+ 10      gender_specific  VARCHAR2(10),
+ 11      fac_roomno       NUMBER(7) NOT NULL
+ 12  );
+
+Table CLASS created.
+
+SQL> 
+SQL> COMMENT ON COLUMN class.ctr_id IS
+  2      'centre id';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN class.cls_num IS
+  2      'class number assigned to this class';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN class.cls_sdatetime IS
+  2      'class start date and time';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN class.cls_maxpax IS
+  2      'maximum capacity of a class';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN class.cls_numsess IS
+  2      'number of session of the class';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN class.cls_cost IS
+  2      'the cost that member pays to join a class, the price is decimal pricing.';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN class.cls_duration IS
+  2      'class duration in minutes';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN class.cls_type IS
+  2      'class type';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN class.fac_roomno IS
+  2      'facility room number';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE class ADD CONSTRAINT class_pk PRIMARY KEY ( cls_num,
+  2                                                          ctr_id );
+
+Table CLASS altered.
+
+SQL> 
+SQL> CREATE TABLE class_staffing (
+  2      staffing_no    NUMBER(7) NOT NULL,
+  3      ctr_id         NUMBER(7) NOT NULL,
+  4      cls_num        NUMBER(7) NOT NULL,
+  5      stf_id         NUMBER(7) NOT NULL,
+  6      cls_lead       VARCHAR2(10) NOT NULL,
+  7      first_aidcert  VARCHAR2(10)
+  8  );
+
+Table CLASS_STAFFING created.
+
+SQL> 
+SQL> COMMENT ON COLUMN class_staffing.staffing_no IS
+  2      'class staffing number (surrogate key)';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN class_staffing.ctr_id IS
+  2      'centre id';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN class_staffing.cls_num IS
+  2      'class number assigned to this class';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN class_staffing.stf_id IS
+  2      'staff id';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN class_staffing.cls_lead IS
+  2      'inidcating if the staff is the leader of the stated class';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN class_staffing.first_aidcert IS
+  2      'inidcating if the staff is first aid certified';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE class_staffing ADD CONSTRAINT staffing_pk PRIMARY KEY ( staffing_no );
+
+Table CLASS_STAFFING altered.
+
+SQL> 
+SQL> ALTER TABLE class_staffing
+  2      ADD CONSTRAINT staffing_nk UNIQUE ( ctr_id,
+  3                                          cls_num,
+  4                                          stf_id );
+
+Table CLASS_STAFFING altered.
+
+SQL> 
+SQL> CREATE TABLE classtype (
+  2      cls_type  VARCHAR2(50) NOT NULL,
+  3      cls_desc  VARCHAR2(50) NOT NULL
+  4  );
+
+Table CLASSTYPE created.
+
+SQL> 
+SQL> COMMENT ON COLUMN classtype.cls_type IS
+  2      'class type';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN classtype.cls_desc IS
+  2      'class description';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE classtype ADD CONSTRAINT classtype_pk PRIMARY KEY ( cls_type );
+
+Table CLASSTYPE altered.
+
+SQL> 
+SQL> CREATE TABLE facility (
+  2      ctr_id      NUMBER(7) NOT NULL,
+  3      fac_roomno  NUMBER(7) NOT NULL,
+  4      fac_name    VARCHAR2(50) NOT NULL,
+  5      fac_cap     NUMBER(7) NOT NULL,
+  6      fac_desc    VARCHAR2(50) NOT NULL
+  7  );
+
+Table FACILITY created.
+
+SQL> 
+SQL> COMMENT ON COLUMN facility.ctr_id IS
+  2      'centre id';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN facility.fac_roomno IS
+  2      'facility room number';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN facility.fac_name IS
+  2      'facility name';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN facility.fac_cap IS
+  2      'facility pax capacity';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN facility.fac_desc IS
+  2      'facility description';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE facility ADD CONSTRAINT facility_pk PRIMARY KEY ( fac_roomno,
+  2                                                                ctr_id );
+
+Table FACILITY altered.
+
+SQL> 
+SQL> CREATE TABLE member (
+  2      mem_no             NUMBER(7) NOT NULL,
+  3      mem_name           VARCHAR2(50) NOT NULL,
+  4      mem_street         VARCHAR2(50) NOT NULL,
+  5      mem_town           VARCHAR2(50) NOT NULL,
+  6      mem_postcode       VARCHAR2(10) NOT NULL,
+  7      mem_phone          VARCHAR2(50) NOT NULL,
+  8      ctr_id             NUMBER(7) NOT NULL,
+  9      mem_referredby_id  NUMBER(7) NOT NULL
+ 10  );
+
+Table MEMBER created.
+
+SQL> 
+SQL> COMMENT ON COLUMN member.mem_no IS
+  2      'member number, unique to each member';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN member.mem_name IS
+  2      'member full name';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN member.mem_street IS
+  2      'street of member''s address';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN member.mem_town IS
+  2      'town of member''s address';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN member.mem_postcode IS
+  2      'postcode of member''s address';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN member.mem_phone IS
+  2      'member''s phone number';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN member.ctr_id IS
+  2      'centre id';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN member.mem_referredby_id IS
+  2      'member number, unique to each member';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE member ADD CONSTRAINT member_pk PRIMARY KEY ( mem_no );
+
+Table MEMBER altered.
+
+SQL> 
+SQL> CREATE TABLE payment (
+  2      mem_no    NUMBER(7) NOT NULL,
+  3      pay_date  DATE NOT NULL,
+  4      cls_num   NUMBER(7) NOT NULL,
+  5      ctr_id    NUMBER(7) NOT NULL
+  6  );
+
+Table PAYMENT created.
+
+SQL> 
+SQL> COMMENT ON COLUMN payment.mem_no IS
+  2      'member number, unique to each member';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN payment.pay_date IS
+  2      'date of payment made';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN payment.cls_num IS
+  2      'class number assigned to this class';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN payment.ctr_id IS
+  2      'centre id';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE payment ADD CONSTRAINT payment_pk PRIMARY KEY ( mem_no );
+
+Table PAYMENT altered.
+
+SQL> 
+SQL> CREATE TABLE staff (
+  2      stf_id     NUMBER(7) NOT NULL,
+  3      stf_fname  VARCHAR2(50) NOT NULL,
+  4      stf_lname  VARCHAR2(50) NOT NULL,
+  5      stf_phone  VARCHAR2(50) NOT NULL,
+  6      stf_role   CHAR(1) NOT NULL,
+  7      ctr_id     NUMBER(7) NOT NULL
+  8  );
+
+Table STAFF created.
+
+SQL> 
+SQL> ALTER TABLE staff
+  2      ADD CONSTRAINT stf_role CHECK ( stf_role IN ( 'A', 'C', 'D', 'M', 'P',
+  3                                                    'S', 'T' ) );
+
+Table STAFF altered.
+
+SQL> 
+SQL> COMMENT ON COLUMN staff.stf_id IS
+  2      'staff id';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN staff.stf_fname IS
+  2      'staff firstname';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN staff.stf_phone IS
+  2      'staff phone number';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN staff.ctr_id IS
+  2      'centre id';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE staff ADD CONSTRAINT staff_pk PRIMARY KEY ( stf_id );
+
+Table STAFF altered.
+
+SQL> 
+SQL> ALTER TABLE facility
+  2      ADD CONSTRAINT centre_facility FOREIGN KEY ( ctr_id )
+  3          REFERENCES centre ( ctr_id );
+
+Table FACILITY altered.
+
+SQL> 
+SQL> ALTER TABLE staff
+  2      ADD CONSTRAINT centre_staff FOREIGN KEY ( ctr_id )
+  3          REFERENCES centre ( ctr_id );
+
+Table STAFF altered.
+
+SQL> 
+SQL> ALTER TABLE attendance
+  2      ADD CONSTRAINT class_attendance FOREIGN KEY ( cls_num,
+  3                                                    ctr_id )
+  4          REFERENCES class ( cls_num,
+  5                             ctr_id );
+
+Table ATTENDANCE altered.
+
+SQL> 
+SQL> ALTER TABLE class
+  2      ADD CONSTRAINT class_classtype FOREIGN KEY ( cls_type )
+  3          REFERENCES classtype ( cls_type );
+
+Table CLASS altered.
+
+SQL> 
+SQL> ALTER TABLE class_staffing
+  2      ADD CONSTRAINT class_staffing FOREIGN KEY ( cls_num,
+  3                                                  ctr_id )
+  4          REFERENCES class ( cls_num,
+  5                             ctr_id );
+
+Table CLASS_STAFFING altered.
+
+SQL> 
+SQL> ALTER TABLE class
+  2      ADD CONSTRAINT facility_class FOREIGN KEY ( fac_roomno,
+  3                                                  ctr_id )
+  4          REFERENCES facility ( fac_roomno,
+  5                                ctr_id );
+
+Table CLASS altered.
+
+SQL> 
+SQL> ALTER TABLE assessment
+  2      ADD CONSTRAINT member_assessment FOREIGN KEY ( mem_no )
+  3          REFERENCES member ( mem_no );
+
+Table ASSESSMENT altered.
+
+SQL> 
+SQL> ALTER TABLE member
+  2      ADD CONSTRAINT member_centre FOREIGN KEY ( ctr_id )
+  3          REFERENCES centre ( ctr_id );
+
+Table MEMBER altered.
+
+SQL> 
+SQL> ALTER TABLE member
+  2      ADD CONSTRAINT member_member FOREIGN KEY ( mem_referredby_id )
+  3          REFERENCES member ( mem_no );
+
+Table MEMBER altered.
+
+SQL> 
+SQL> ALTER TABLE payment
+  2      ADD CONSTRAINT member_payment FOREIGN KEY ( mem_no )
+  3          REFERENCES member ( mem_no );
+
+Table PAYMENT altered.
+
+SQL> 
+SQL> ALTER TABLE payment
+  2      ADD CONSTRAINT payment_class FOREIGN KEY ( cls_num,
+  3                                                 ctr_id )
+  4          REFERENCES class ( cls_num,
+  5                             ctr_id );
+
+Table PAYMENT altered.
+
+SQL> 
+SQL> ALTER TABLE assessment
+  2      ADD CONSTRAINT staff_assessment FOREIGN KEY ( stf_id )
+  3          REFERENCES staff ( stf_id );
+
+Table ASSESSMENT altered.
+
+SQL> 
+SQL> ALTER TABLE class_staffing
+  2      ADD CONSTRAINT staff_cls_staffing FOREIGN KEY ( stf_id )
+  3          REFERENCES staff ( stf_id );
+
+Table CLASS_STAFFING altered.
+
+SQL> 
+SQL> 
+SQL> 
+SQL> -- Oracle SQL Developer Data Modeler Summary Report: 
+SQL> -- 
+SQL> -- CREATE TABLE                            10
+SQL> -- CREATE INDEX                             0
+SQL> -- ALTER TABLE                             27
+SQL> -- CREATE VIEW                              0
+SQL> -- ALTER VIEW                               0
+SQL> -- CREATE PACKAGE                           0
+SQL> -- CREATE PACKAGE BODY                      0
+SQL> -- CREATE PROCEDURE                         0
+SQL> -- CREATE FUNCTION                          0
+SQL> -- CREATE TRIGGER                           0
+SQL> -- ALTER TRIGGER                            0
+SQL> -- CREATE COLLECTION TYPE                   0
+SQL> -- CREATE STRUCTURED TYPE                   0
+SQL> -- CREATE STRUCTURED TYPE BODY              0
+SQL> -- CREATE CLUSTER                           0
+SQL> -- CREATE CONTEXT                           0
+SQL> -- CREATE DATABASE                          0
+SQL> -- CREATE DIMENSION                         0
+SQL> -- CREATE DIRECTORY                         0
+SQL> -- CREATE DISK GROUP                        0
+SQL> -- CREATE ROLE                              0
+SQL> -- CREATE ROLLBACK SEGMENT                  0
+SQL> -- CREATE SEQUENCE                          0
+SQL> -- CREATE MATERIALIZED VIEW                 0
+SQL> -- CREATE MATERIALIZED VIEW LOG             0
+SQL> -- CREATE SYNONYM                           0
+SQL> -- CREATE TABLESPACE                        0
+SQL> -- CREATE USER                              0
+SQL> -- 
+SQL> -- DROP TABLESPACE                          0
+SQL> -- DROP DATABASE                            0
+SQL> -- 
+SQL> -- REDACTION POLICY                         0
+SQL> -- TSDP POLICY                              0
+SQL> -- 
+SQL> -- ORDS DROP SCHEMA                         0
+SQL> -- ORDS ENABLE SCHEMA                       0
+SQL> -- ORDS ENABLE OBJECT                       0
+SQL> -- 
+SQL> -- ERRORS                                   0
+SQL> -- WARNINGS                                 0
+SQL> 
+SQL> SPOOL off

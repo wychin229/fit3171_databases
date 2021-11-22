@@ -1,0 +1,127 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D9BC9B3E-F2DC-D23F-0D64-48C8B5F02545" name="STAFF">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 06:56:13 UTC</createdTime>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="stf_id" id="C402985A-84A7-5050-911C-B750F8C75904">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 06:57:10 UTC</createdTime>
+<commentInRDBMS><![CDATA[staff id]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="stf_fname" id="037ED3F1-1227-7BC8-8F84-22EEDD682F35">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 06:58:37 UTC</createdTime>
+<commentInRDBMS><![CDATA[staff firstname]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="stf_lname" id="6ECBA007-5422-A735-C1DC-46426B0D048B">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 06:59:36 UTC</createdTime>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="stf_phone" id="DAF4FAEF-4C84-B059-AB88-20578DDB04E5">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 06:59:53 UTC</createdTime>
+<commentInRDBMS><![CDATA[staff phone number]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="stf_role" id="6907BB09-B819-14C5-A641-4E5485099DB7">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 07:01:59 UTC</createdTime>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<constraintName>stf_role</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<listOfValues>
+<valueDef value="A" description="Administration"/>
+<valueDef value="C" description="Cleaner"/>
+<valueDef value="D" description="Instructor Dry"/>
+<valueDef value="M" description="Manager"/>
+<valueDef value="P" description="Instructor Pool"/>
+<valueDef value="S" description="Sales"/>
+<valueDef value="T" description="Security"/>
+</listOfValues>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ctr_id" id="86CEF422-C021-D379-6F24-D37665541551">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 13:04:22 UTC</createdTime>
+<commentInRDBMS><![CDATA[centre id]]></commentInRDBMS>
+<generatorID>0DC54AB8-8B0F-D622-77F1-AB075605B7AB</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<referedAttribute>69B2CF77-7EE5-7154-4661-58B0E4CD64E3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="99815A42-3D1D-49C4-CB94-54BA1FB1CC7F" name="STAFF PK">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 06:57:53 UTC</createdTime>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>C402985A-84A7-5050-911C-B750F8C75904</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

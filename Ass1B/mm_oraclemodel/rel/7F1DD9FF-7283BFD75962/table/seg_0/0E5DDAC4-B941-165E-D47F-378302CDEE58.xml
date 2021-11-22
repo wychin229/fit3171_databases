@@ -1,0 +1,192 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0E5DDAC4-B941-165E-D47F-378302CDEE58" name="CLASS">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<generatorID>FD6EB4AE-01D4-823B-7D4C-9DA82946F1E0</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ctr_id" id="6C3E7815-5FF1-A630-A075-511F7D3610CC">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[centre id]]></commentInRDBMS>
+<generatorID>1D6C88B6-0316-061F-B84E-070448D4A06A</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E993E378-D8B0-D736-2066-5CA7EA0BABB4" referredColumn="0E2BDA49-B676-D66A-FB8E-BB40E0281C65"/>
+</associations>
+</Column>
+<Column name="cls_num" id="F53F0AC5-958C-3C39-A328-0A00D12475BD">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[class number assigned to this class]]></commentInRDBMS>
+<generatorID>E3D5819F-A728-DF9D-79A4-88507F3AF39B</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cls_sdatetime" id="782BC4B2-13D1-319B-874F-A723012CC353">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[class start date and time]]></commentInRDBMS>
+<generatorID>FE88682F-3CCC-B42C-0382-5129105CA4E7</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cls_maxpax" id="A45A5049-8E7A-A320-24EB-536C0392FCA4">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[maximum capacity of a class]]></commentInRDBMS>
+<generatorID>234BAFD7-B8A6-65B1-040C-A86F4BA45DF4</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cls_numsess" id="F0493B67-5B31-2230-620B-BA167D0A6945">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[number of session of the class]]></commentInRDBMS>
+<generatorID>F3F3CC92-FA61-8AAB-DBB5-E08297112685</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cls_cost" id="6CC0C00D-8495-744A-77E4-6DE7944DD70B">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[the cost that member pays to join a class, the price is decimal pricing.]]></commentInRDBMS>
+<generatorID>E409AFF7-3625-D296-BB8E-6D05505A2D35</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,7,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cls_duration" id="7A6FEB4D-CB0B-B71C-600D-BFC5A3C2D3F6">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[class duration in minutes]]></commentInRDBMS>
+<generatorID>A234D281-B8F4-2940-9600-94E842837799</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cls_type" id="0DB425E6-E3D3-56DF-B0C8-45155E2430F6">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[class type]]></commentInRDBMS>
+<generatorID>5D414AAD-3CB1-4EC8-85B0-3EC82FC265DB</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FAD5F567-F763-FC82-8888-0EF4210F6BA9" referredColumn="02FA9B9F-2BE7-192A-E720-E51A2934A27E"/>
+</associations>
+</Column>
+<Column name="gender_specific" id="B400189E-6F02-86B7-9EF5-4E9D604F732A">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<generatorID>8625053F-BED9-EA3D-868B-651F59EBB321</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fac_roomno" id="0506756F-DEB3-7F0B-C8DB-72B79249C74E">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[facility room number]]></commentInRDBMS>
+<generatorID>F9411210-EB2B-44E3-39EC-9D2CF938EF2D</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E993E378-D8B0-D736-2066-5CA7EA0BABB4" referredColumn="FDDC6734-6933-4AE0-F5A9-F8A826BC5D24"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BDA88E8C-465F-6989-BDF7-0823383DD6A9" name="CLASS_PK">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<generatorID>C496EA0C-D53E-06A8-A7D8-789B3E4A9A9B</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F53F0AC5-958C-3C39-A328-0A00D12475BD"/>
+<colUsage columnID="6C3E7815-5FF1-A630-A075-511F7D3610CC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C815CBCC-BD8E-5C51-8D4F-A3192F4DA10A" name="CLASS_CLASSTYPE">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<generatorID>5E8AB5C6-A390-887D-B2C8-A3866FBCB789</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0DB425E6-E3D3-56DF-B0C8-45155E2430F6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="805FD2EB-D5DF-B0E4-7C52-4135CFBCE674" name="FACILITY_CLASS">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<generatorID>A865C20D-DF6F-EE1D-263C-7A52B6290491</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0506756F-DEB3-7F0B-C8DB-72B79249C74E"/>
+<colUsage columnID="6C3E7815-5FF1-A630-A075-511F7D3610CC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

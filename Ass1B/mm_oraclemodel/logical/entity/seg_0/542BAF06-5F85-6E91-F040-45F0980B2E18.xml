@@ -1,0 +1,163 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="542BAF06-5F85-6E91-F040-45F0980B2E18" name="ASSESSMENT">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 12:12:27 UTC</createdTime>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ast_no" id="2BDED531-CE10-4CFE-3D5C-28FA776CAEA9">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 13:36:52 UTC</createdTime>
+<commentInRDBMS><![CDATA[assessment number (surrogate PK)]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="mem_no" id="43259B81-E795-4EED-780B-5CBF8A7A9B8D">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 12:13:10 UTC</createdTime>
+<commentInRDBMS><![CDATA[member number, unique to each member]]></commentInRDBMS>
+<generatorID>B58DB415-345E-D3CC-C2A4-95F32ACB82C2</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<referedAttribute>B712F4D8-F63D-FEA3-0836-6E3CE3CE4EEE</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ast_date" id="AD9F6394-AD18-CF73-AE0B-53A3AC6BFDD0">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 12:15:26 UTC</createdTime>
+<commentInRDBMS><![CDATA[date of assessment completion]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ast_weight" id="D940E571-469E-809A-3374-E15FBB96A927">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 12:15:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[weight of member]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ast_bp" id="82F85CDF-83E0-C0AD-C2BD-8AF11BEBE569">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 12:16:27 UTC</createdTime>
+<commentInRDBMS><![CDATA[bp of member]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ast_bmi" id="0CCF3C7A-1272-EA17-90D2-3421FE89EE69">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 12:16:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[bmi of member]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ast_vo2max" id="E062BE65-485D-0FEF-7561-F253AE3F237F">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 12:17:02 UTC</createdTime>
+<commentInRDBMS><![CDATA[VO2Max of member]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="stf_id" id="7EBC7B18-4A61-449A-44B5-2CEECA76AABB">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 12:17:42 UTC</createdTime>
+<commentInRDBMS><![CDATA[staff id]]></commentInRDBMS>
+<generatorID>C2A86C7D-656D-E909-D568-9EE5AB41027D</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="true"/>
+</engineerTo>
+<referedAttribute>C402985A-84A7-5050-911C-B750F8C75904</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="CB2169AB-3FE4-1E44-D269-6854AC13CB29" name="ASSESSMENT PK">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 12:13:10 UTC</createdTime>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>2BDED531-CE10-4CFE-3D5C-28FA776CAEA9</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="A5DA1E50-EF66-A782-373A-5BD5963AED38" name="ASSESSMENT_NK">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 13:39:30 UTC</createdTime>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="7F1DD9FF-279C-5CA7-C4BF-7283BFD75962" value="false"/>
+</engineerTo>
+<newElementsIDs>AD9F6394-AD18-CF73-AE0B-53A3AC6BFDD0,43259B81-E795-4EED-780B-5CBF8A7A9B8D</newElementsIDs>
+<usedAttributes>
+<attributeRef>AD9F6394-AD18-CF73-AE0B-53A3AC6BFDD0</attributeRef>
+<attributeRef>43259B81-E795-4EED-780B-5CBF8A7A9B8D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

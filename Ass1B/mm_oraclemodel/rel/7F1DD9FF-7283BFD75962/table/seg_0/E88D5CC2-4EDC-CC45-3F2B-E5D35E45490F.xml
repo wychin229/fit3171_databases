@@ -1,0 +1,112 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E88D5CC2-4EDC-CC45-3F2B-E5D35E45490F" name="PAYMENT">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<generatorID>35F3A7B4-93C4-A5D8-E564-E3E3048BB45D</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="mem_no" id="06332748-67C6-49A0-82C6-D24825029546">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[member number, unique to each member]]></commentInRDBMS>
+<generatorID>0DDE9A58-B1D3-FD22-552D-8BA64D09E4E6</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="259C7B33-C3CB-ACD9-FFE4-A0B6C84730E2" referredColumn="C01A05FC-AFB6-2BC7-7F28-A0A3DA6BCC1D"/>
+</associations>
+</Column>
+<Column name="pay_date" id="930D2BA5-787F-2D06-DDE7-7C32F31C468E">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[date of payment made]]></commentInRDBMS>
+<generatorID>514E6EDF-9741-5EA8-B16B-FBAC63B683AC</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cls_num" id="69D00080-F13C-548D-14B3-992EBA254397">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[class number assigned to this class]]></commentInRDBMS>
+<generatorID>5333968B-85DA-A9F3-4667-55BE5A7A4A74</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E11BF02D-BCE9-5F21-ACE5-795941A39AC4" referredColumn="F53F0AC5-958C-3C39-A328-0A00D12475BD"/>
+</associations>
+</Column>
+<Column name="ctr_id" id="8346BB71-50C0-1C47-BD55-26FF02033245">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[centre id]]></commentInRDBMS>
+<generatorID>DC798A85-4276-99C5-5539-A56853A9A07C</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E11BF02D-BCE9-5F21-ACE5-795941A39AC4" referredColumn="6C3E7815-5FF1-A630-A075-511F7D3610CC"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4C1DF09D-2781-FDA0-A240-AC3B68DB115A" name="PAYMENT_PK">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<generatorID>E0F738E3-B6FD-03EF-D468-8F65AE07B043</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="06332748-67C6-49A0-82C6-D24825029546"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FE105FDD-8757-9581-5D02-0CDBFE6A542A" name="MEMBER_PAYMENT">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<generatorID>6699CF72-255B-9B4C-941F-71AAE61155FD</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="06332748-67C6-49A0-82C6-D24825029546"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6D53B4FF-86B9-2B4B-7320-737EB5FE823E" name="PAYMENT_CLASS">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<generatorID>79FDEF58-CB1E-E98D-7219-D78297777C39</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="69D00080-F13C-548D-14B3-992EBA254397"/>
+<colUsage columnID="8346BB71-50C0-1C47-BD55-26FF02033245"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

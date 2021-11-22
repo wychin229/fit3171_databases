@@ -1,0 +1,127 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="232347F6-9B25-9153-9866-360BCEEEBEEC" name="STAFF">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<generatorID>D9BC9B3E-F2DC-D23F-0D64-48C8B5F02545</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="stf_id" id="1537FA4E-8BD4-53D1-8931-A3AD019E01F5">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[staff id]]></commentInRDBMS>
+<generatorID>C402985A-84A7-5050-911C-B750F8C75904</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="stf_fname" id="544B7461-E707-54DA-1C90-759D21528B90">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[staff firstname]]></commentInRDBMS>
+<generatorID>037ED3F1-1227-7BC8-8F84-22EEDD682F35</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="stf_lname" id="83F24206-BB46-6CDA-4ED6-57A0F16B687F">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<generatorID>6ECBA007-5422-A735-C1DC-46426B0D048B</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="stf_phone" id="6B62D41E-6C21-CE8B-20DF-30794BA4AC65">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[staff phone number]]></commentInRDBMS>
+<generatorID>DAF4FAEF-4C84-B059-AB88-20578DDB04E5</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="stf_role" id="856D8CB0-74F8-5EB5-9007-FC1212F8DCBF">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<generatorID>6907BB09-B819-14C5-A641-4E5485099DB7</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<constraintName>stf_role</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<listOfValues>
+<valueDef value="A" description="Administration"/>
+<valueDef value="C" description="Cleaner"/>
+<valueDef value="D" description="Instructor Dry"/>
+<valueDef value="M" description="Manager"/>
+<valueDef value="P" description="Instructor Pool"/>
+<valueDef value="S" description="Sales"/>
+<valueDef value="T" description="Security"/>
+</listOfValues>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ctr_id" id="90E38C95-45ED-C65E-E57B-785F27623795">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[centre id]]></commentInRDBMS>
+<generatorID>86CEF422-C021-D379-6F24-D37665541551</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="97093D1E-240A-E4BC-AD45-38B39766B76B" referredColumn="6F49124F-39C6-6420-C8CD-03BFBC04EF33"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9B3D79B8-8858-FF93-F12D-6B4594D06DD4" name="STAFF_PK">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<generatorID>99815A42-3D1D-49C4-CB94-54BA1FB1CC7F</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1537FA4E-8BD4-53D1-8931-A3AD019E01F5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3A1DD742-82EF-6CD6-53E2-D0CC491475E1" name="CENTRE_STAFF">
+<createdBy>Chin</createdBy>
+<createdTime>2021-09-15 14:11:28 UTC</createdTime>
+<generatorID>0DC54AB8-8B0F-D622-77F1-AB075605B7AB</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="90E38C95-45ED-C65E-E57B-785F27623795"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
